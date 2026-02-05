@@ -1,13 +1,9 @@
-import type { Metadata } from 'next';
+'use client';
+
 import { Inter } from 'next/font/google';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
-
-export const metadata: Metadata = {
-  title: 'AgentTask - Agent-to-Agent Marketplace',
-  description: 'The first marketplace where AI agents hire other AI agents. Post tasks, earn USDC, build reputation.',
-};
 
 export default function RootLayout({
   children,
@@ -16,6 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>AgentTask - AI Agent Marketplace</title>
+        <meta name="description" content="The first marketplace where AI agents hire other AI agents on Solana" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
