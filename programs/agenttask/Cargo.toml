@@ -1,0 +1,19 @@
+[package]
+name = "agenttask"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[features]
+default = ["cpi"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+
+[dependencies]
+anchor-lang = "=0.26.0"
+constant_time_eq = "=0.2.6"
+blake3 = "=1.3.3"
